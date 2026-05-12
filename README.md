@@ -5,6 +5,40 @@ Groupe : Adam Sabor
 
 ---
 
+## Prérequis
+
+- **Java 17+** installé ([télécharger ici](https://www.oracle.com/java/technologies/downloads/))
+- Vérifier l'installation : `java -version`
+
+---
+
+## Lancer le projet
+
+### Option 1 — Terminal (recommandé)
+
+```bash
+# 1. Se placer à la racine du projet
+cd GestionnaireVoiture
+
+# 2. Compiler les sources
+mkdir -p out
+javac -encoding UTF-8 -d out -sourcepath src $(find src -name "*.java")
+
+# 3. Lancer l'application
+java -cp out Main
+```
+
+### Option 2 — IDE (IntelliJ IDEA / Eclipse)
+
+1. Ouvrir le projet dans l'IDE
+2. Marquer le dossier `src/` comme **source root**
+3. Lancer la classe `Main.java`
+
+> Au premier lancement, des **données de démonstration** sont injectées automatiquement.  
+> Les données sont sauvegardées dans `resources/flotte.ser` à chaque fermeture.
+
+---
+
 ## Domaine métier
 
 Application de gestion d'une flotte de véhicules d'entreprise.  
@@ -20,19 +54,6 @@ Choix justifié :
 - **JTable avec TableModel personnalisé** : tri dynamique sur toutes les colonnes par clic d'en-tête.
 - **SwingUtilities.invokeLater()** utilisé dans `Main.java` pour respecter l'EDT Swing.
 - **Aucun code métier dans les ActionListener** : tout délègue au `GestionnaireFlotte`.
-
----
-
-## Compilation et exécution
-
-```bash
-# Depuis la racine du projet
-mkdir -p out
-javac -encoding UTF-8 -d out -sourcepath src $(find src -name "*.java")
-java -cp out Main
-```
-
-Ou depuis un IDE (IntelliJ, Eclipse) : ajouter `src/` comme source root et lancer `Main`.
 
 ---
 
