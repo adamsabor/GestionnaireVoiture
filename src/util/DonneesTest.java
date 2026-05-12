@@ -44,12 +44,12 @@ public class DonneesTest {
         c1.setNombreKmTotal(45_000);
         c2.setNombreKmTotal(82_000);
         c3.setNombreKmTotal(120_000);
-        c4.setNombreKmTotal(31_000);
+       
 
         g.ajouterChauffeur(c1);
         g.ajouterChauffeur(c2);
         g.ajouterChauffeur(c3);
-        g.ajouterChauffeur(c4);
+        
 
         // ===== ENTRETIENS =====
         LocalDate hier     = LocalDate.now().minusDays(1);
@@ -93,7 +93,7 @@ public class DonneesTest {
             MissionCourte m4 = new MissionCourte("Livraison express Nantes", "Nantes", "Rennes",
                 LocalDate.now(), 110.0);
             g.ajouterMission(m4);
-            g.assignerMission(m4, v1, c4);
+            g.assignerMission(m4, v1, c3);
         } catch (VehiculeIndisponibleException | ChauffeurSansPermisException | MissionDejaAssigneeException ex) {
             System.err.println("Erreur données test : " + ex.getMessage());
         }

@@ -21,8 +21,7 @@ Groupe : Adam Sabor
 cd GestionnaireVoiture
 
 # 2. Compiler les sources
-mkdir -p out
-javac -encoding UTF-8 -d out -sourcepath src $(find src -name "*.java")
+
 
 # 3. Lancer l'application
 java -cp out Main
