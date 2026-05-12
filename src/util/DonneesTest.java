@@ -38,10 +38,9 @@ public class DonneesTest {
         g.ajouterVehicule(v5);
 
         // ===== CHAUFFEURS =====
-        Chauffeur c1 = new Chauffeur("Martin", "Lucas", "06 11 22 33 44", List.of(TypePermis.B));
-        Chauffeur c2 = new Chauffeur("Dubois", "Marie", "06 55 66 77 88", List.of(TypePermis.B, TypePermis.C));
-        Chauffeur c3 = new Chauffeur("Bernard", "Paul", "07 12 34 56 78", List.of(TypePermis.B, TypePermis.C, TypePermis.CE));
-        Chauffeur c4 = new Chauffeur("Leroy", "Sophie", "06 98 76 54 32", List.of(TypePermis.B));
+        Chauffeur c1 = new Chauffeur("Behouch", "Youness", "06 11 22 33 44", List.of(TypePermis.B));
+        Chauffeur c2 = new Chauffeur("Bouabizi", "Yazid", "06 55 66 77 88", List.of(TypePermis.B, TypePermis.C));
+        Chauffeur c3 = new Chauffeur("Sabor", "Adam", "07 12 34 56 78", List.of(TypePermis.B, TypePermis.C, TypePermis.CE));
         c1.setNombreKmTotal(45_000);
         c2.setNombreKmTotal(82_000);
         c3.setNombreKmTotal(120_000);
